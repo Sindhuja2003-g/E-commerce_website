@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCraft</title>
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    background-color: #aba0a0; 
+    
+  }
+
+  .heading {
+        text-align: center;
+        font-size: 48px;
+        color: #000; 
+        margin-top: 50px;
+        transform: translateZ(0);
+        transition: color 0.3s ease-in-out;
+    }
+    .heading:hover {
+        color: #333;
+    }
+    .image-container3 {
+      display: flex; /* Use flexbox for horizontal arrangement */
+      justify-content: center; /* Center align images horizontally */
+      gap: 5px; /* Gap between images */
+      display: flex;
+     flex-wrap: wrap;
+ 
+    /* Limit the width on larger screens */
+    }
+    .image-container3 img {
+      display: block; /* Ensure image takes full width */
+  margin-bottom: 10px; /* Add spacing below image */
+  width: 400px; /* Set a fixed width */
+  height: 500px; /* Set a fixed height */
+  object-fit: contain;
+    }
+    .image-container3 figure {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.image-container3 figure img {
+  display: block; /* Ensure image takes full width */
+  margin-bottom: 10px; /* Add spacing below image */
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  object-fit: contain;
+}
+
+.image-container3 figure figcaption {
+  font-style: italic;
+  font-size: 14px;
+}
+    .product-price {
+      font-weight: bold; /* Make price bold */
+      color: green; /* Set price color */
+    }
+    .watch-image:hover {
+        transform: scale(1.1);
+    }
+    .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button {
+            background-color: #33cc33;
+            color: white;
+            border: none;
+        }
+
+        .cart-button {
+            background-color: #33cc33;
+            color: white;
+            border: none;
+            margin-left: 10px; /* Add some space between buttons */
+        }
+
+        /* Button Icon Styling */
+        .button i {
+            margin-right: 5px; /* Add some space between icon and text */
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background-color: #e65c00; /* Darken background color on hover */
+        }
+    
+</style>
+</head>
+<body>
+    <h1 class="heading">Kenneth Cole</h1>
+    <div class="image-container3">
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw1498b4f1/images/Helios/Catalog/KCWGG2122902MN_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Black Dial Stainless<br> Steel Strap Watch For Men
+                </figcaption><br>
+                <span class="product-price">₹ 12,999</span><br><br>
+                <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+                <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw8a9407c9/images/Helios/Catalog/KCWLA0026702LD_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Quartz Analog Brown Dial 
+                <br>Antique Leather Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 10,995</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw801f077a/images/Helios/Catalog/KCWLG2124204LD_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Quartz Analog White Dial 
+                <br>Stainless Steel Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 9,100</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw064c6176/images/Helios/Catalog/KCWGK2123302MN_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Grey Dial Stainless
+                <br> Steel Strap Watch For Men</figcaption><br>
+            <span class="product-price">₹ 11,160</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+       
+    </div>
+</body>
+</html>

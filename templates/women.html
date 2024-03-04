@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCraft</title>
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    background-color: #aba0a0; 
+    
+  }
+
+  .heading {
+        text-align: center;
+        font-size: 48px;
+        color: #000; 
+        margin-top: 50px;
+        transform: translateZ(0);
+        transition: color 0.3s ease-in-out;
+    }
+    .heading:hover {
+        color: #333;
+    }
+    .image-container3 {
+      display: flex; /* Use flexbox for horizontal arrangement */
+      justify-content: center; /* Center align images horizontally */
+      gap: 5px; /* Gap between images */
+      display: flex;
+     flex-wrap: wrap;
+ 
+    /* Limit the width on larger screens */
+    }
+    .image-container3 img {
+      display: block; /* Ensure image takes full width */
+  margin-bottom: 10px; /* Add spacing below image */
+  width: 400px; /* Set a fixed width */
+  height: 500px; /* Set a fixed height */
+  object-fit: contain;
+    }
+    .image-container3 figure {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.image-container3 figure img {
+  display: block; /* Ensure image takes full width */
+  margin-bottom: 10px; /* Add spacing below image */
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  object-fit: contain;
+}
+
+.image-container3 figure figcaption {
+  font-style: italic;
+  font-size: 14px;
+}
+    .product-price {
+      font-weight: bold; /* Make price bold */
+      color: green; /* Set price color */
+    }
+    .watch-image:hover {
+        transform: scale(1.1);
+    }
+    .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button {
+            background-color: #33cc33;
+            color: white;
+            border: none;
+        }
+
+        .cart-button {
+            background-color: #33cc33;
+            color: white;
+            border: none;
+            margin-left: 10px; /* Add some space between buttons */
+        }
+
+        /* Button Icon Styling */
+        .button i {
+            margin-right: 5px; /* Add some space between icon and text */
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background-color: #e65c00; /* Darken background color on hover */
+        }
+    
+</style>
+</head>
+<body>
+    <h1 class="heading">Women's Collection</h1>
+    <div class="image-container3">
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw1b01d055/images/Helios/Catalog/AKB3620CRST_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Anne Klein Quartz Analog Champagne 
+                <br>Dial Metal Strap Watch for Women
+                </figcaption><br>
+                <span class="product-price">₹ 10,750</span><br><br>
+                <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+                <button class="button cart-button" onclick="addToCart('Product 1', 10)"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwbbddeec4/images/Helios/Catalog/AK4055WTRT_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Anne Klein Quartz Analog White Dial
+                <br> Ceramic Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 7,800</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw27b977d2/images/Helios/Catalog/AK2130TNGB_2.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Anne Klein Quartz Analog Mother of Pearl 
+                <br>Dial Ceramic Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 13,475</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwefa60923/images/Fastrack/Catalog/6278WM01_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Fastrack Younique Quartz Analog Rose Gold Dial 
+                <br>Stainless Steel Strap Watch for Girls</figcaption><br>
+            <span class="product-price">₹ 3,695</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7a1813de/images/Fastrack/Catalog/68010SM01_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Fastrack Quartz Analog White Dial<br>
+                Stainless Steel Strap Watch for Girls
+                </figcaption><br>
+                <span class="product-price">₹ 1,695</span><br><br>
+                <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+                <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw8a9407c9/images/Helios/Catalog/KCWLA0026702LD_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Quartz Analog Brown Dial 
+                <br>Antique Leather Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 10,995</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwefa60923/images/Fastrack/Catalog/6278WM01_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Fastrack Younique Quartz Analog Rose Gold Dial 
+                <br>Stainless Steel Strap Watch for Girls</figcaption><br>
+            <span class="product-price">₹ 3,695</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw801f077a/images/Helios/Catalog/KCWLG2124204LD_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Kenneth Cole Quartz Analog White Dial 
+                <br>Stainless Steel Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 9,100</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5487e70b/images/Titan/Catalog/2606WM08_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Raga Women's Charm: Elegant Mother of<br>
+                Pearl Dial with Ornate Strap Watch</figcaption><br>
+            <span class="product-price">₹ 7,345</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw605c2129/images/Titan/Catalog/5567DM05_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Titan Nebula Nakashi Quartz Analog 
+                <br>18 Karat Solid Gold Watch for Women</figcaption><br>
+            <span class="product-price">₹ 280,000</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3be37079/images/Titan/Catalog/5572DL01_3.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Titan Nebula Lustre Quartz Analog 18
+                <br> Karat Solid Gold Watch for Women</figcaption><br>
+            <span class="product-price">₹ 85,500</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2747e1b2/images/Titan/Catalog/2655WL01_1.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Titan Women Edge Black Dial <br>Black Leather Strap Watch</figcaption><br>
+            <span class="product-price">₹ 10,495</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw409c8717/images/Sonata/Catalog/8190WM01_2.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Sonata Unveil Quartz Analog Rose Gold
+                <br> Dial Metal Strap Watch for Women
+                </figcaption><br>
+                <span class="product-price">₹ 2,999</span><br><br>
+                <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+                <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+        <figure>
+            <img class="watch-image" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw9c74ba9a/images/Sonata/Catalog/8186WM01_2.jpg?sw=800&sh=800" alt="...">
+            <figcaption>Sonata Wedding Quartz Analog Pink 
+                <br>Dial Metal Strap Watch for Women</figcaption><br>
+            <span class="product-price">₹ 2,899</span><br><br>
+            <button class="button buy-button"><i class="fas fa-shopping-cart"></i>Buy Now</button>
+            <button class="button cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+        </figure>
+    </div>
+    <script src="{% static 'cart.js' %}"></script>
+</body>
+</html>

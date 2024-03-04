@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeCraft</title>
+<style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        animation: changeBackground 4s infinite;
+        background-size: 400% 400%;
+        overflow: hidden;
+    }
+
+    @keyframes changeBackground {
+        0% { background-color: #f0f0f0; }
+        25% { background-color: #d0d0d0; }
+        50% { background-color: #c0c0c0; }
+        75% { background-color: #e0e0e0; }
+        100% { background-color: #f0f0f0; }
+    }
+    
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .image-container figure {
+        background-color: #f0f0f0; /* Background color same as image */
+        color: #333; /* Text color same as image */
+        width: 400px; /* Set fixed width for consistent layout */
+        height: 450px;
+        padding: 20px; /* Add padding for spacing */
+        margin: 10px;
+        text-align: center;
+        position: relative; /* Needed for absolute positioning of caption */
+    }
+
+    .image-container figure img {
+        
+        
+        transition: transform 0.3s ease-in-out;
+        display: block; /* Ensure image takes full width */
+        margin-bottom: 10px; /* Add spacing below image */
+        width: 400px;
+        height: 400px;
+       
+    }
+
+    .image-container figure figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-container figure:hover figcaption {
+        transform: translateY(0);
+    }
+
+    .watch-image:hover {
+        transform: scale(1.1);
+    }
+    .heading {
+        text-align: center;
+        font-size: 48px;
+        color: #000; 
+        margin-top: 50px;
+        transform: translateZ(0);
+        transition: color 0.3s ease-in-out;
+    }
+    .heading:hover {
+        color: #333;  
+</style>
+</head>
+<body>
+    <h1 class="heading">Categories</h1>
+<div class="image-container">
+    <figure>
+        <a href="men"><img class="watch-image" src="https://www.shadestation.co.uk/media/thumbs/950x950/media/campaign_images/950bossfw950fh950.jpg" alt="Men's Watch"></a>
+        <figcaption>Men's Watches Collection </figcaption>
+    </figure>
+    
+    <figure>
+       <a href="women"> <img class="watch-image" src="https://ae01.alicdn.com/kf/HTB1ChMJMcfpK1RjSZFOq6y6nFXal/GIMTO-Brand-Women-Watches-Rose-Gold-Fashion-Quartz-Bracelet-Lovers-Ladies-Watch-Luxury-Female-Clock-relogio.jpg" alt="Women's Watch"></a>
+        <figcaption>Women's Watches Collection</figcaption>
+    </figure>
+</div>
+
+</body>
+</html>
